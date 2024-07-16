@@ -22,6 +22,6 @@ const arr = [4, 8, 2, 1, 7, 4];
 console.log(quickSort(arr));
 
 //There are two types complexity are there
-// for quick sort
+/// for quick sort
 // worst case = O(n^2)
 // Average case = O(nlogn)
