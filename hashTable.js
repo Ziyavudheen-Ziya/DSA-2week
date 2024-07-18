@@ -3,31 +3,25 @@ class HashTable {
     this.table = new Array(size);
     this.size = size;
   }
-
   hash(key) {
     let total = 0;
 
     for (let i = 0; i < key.length; i++) {
       total += key.charCodeAt(i);
     }
-
     return total % this.size;
   }
-
-  set(key, value) {
+ set(key, value) {
     const index = this.hash(key);
 
     this.table[index] = value;
   }
-
-  get(key){
+ get(key){
 
     const index = this.hash(key)
    return this.table[index]
   }
-
-  remove(key){
-
+ remove(key){
      const index = this.hash(key)
      this.table[index] = undefined
   }
@@ -40,15 +34,10 @@ class HashTable {
     }
   }
 }
-
 const table = new HashTable(50);
-
 table.set("name", "ziya");
 table.set("age", 25);
-
 table.display();
-
 console.log(table.get("name"));
-
 table.set("name","Clerk")
 table.display()

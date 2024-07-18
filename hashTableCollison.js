@@ -13,7 +13,6 @@ class HashTable {
 
     return total % this.size;
   }
-
   set(key, value) {
     const index = this.hash(key);
 
@@ -32,25 +31,23 @@ class HashTable {
       }
     }
   }
+//   get(key) {
+//     const index = this.hash(key);
+//     // return this.table[index];
+//     const bucket = this.table[index]
 
-  get(key) {
-    const index = this.hash(key);
-    // return this.table[index];
-    const bucket = this.table[index]
+//     if(bucket){
 
-    if(bucket){
+//         const sameKeyItem = bucket.find((item)=>item[0]===key)
 
-        const sameKeyItem = bucket.find((item)=>item[0]===key)
+//         if(sameKeyItem){
 
-        if(sameKeyItem){
-
-            return sameKeyItem[1]
-        }
-    }
-    return undefined
-  }
-
-  remove(key) {
+//             return sameKeyItem[1]
+//         }
+//     }
+//     return undefined
+//   }
+ remove(key) {
     const index = this.hash(key);
     // this.table[index] = undefined;
     const bucket = this.table[index]
@@ -73,18 +70,15 @@ class HashTable {
     }
   }
 }
-
 const table = new HashTable(50);
-
 table.set("name", "ziya");
 table.set("age", 25);
-
 table.display();
 
-console.log(table.get("name"));
-
 table.set("name", "Clerk");
-table.set("mane","Diana")
+table.display();
+
+table.set("name","Diana")
 table.remove("name")
 table.display();
 

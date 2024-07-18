@@ -44,42 +44,29 @@
 // Queue With Object
 
 class Queue{
-
     constructor(){
-
          this.items = {}
          this.start = 0
          this.end = 0
-
-    }
-
+}
     enqueue(element){
-
-        this.items[this.end] = element
-
-         this.end++;
+   this.items[this.end] = element
+     this.end++;
     }
-
     dequeue(){
-
-        delete this.items[this.start]
+      delete this.items[this.start]
         this.start++;
     }
     display(){
-
-        console.log(this.items);
+       console.log(this.items);
     }
-
 }
-
 let queue = new Queue()
-
 queue.enqueue(10)
 queue.enqueue(20)
 queue.enqueue(30)
-queue.enqueue(40)
-queue.enqueue(50)
 queue.display()
-
 queue.dequeue()
+queue.dequeue()
+
 queue.display()

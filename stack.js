@@ -3,41 +3,30 @@ class Stack {
     this.Stack = [];
     this.capacity = capacity;
   }
-
-  push(value) {
+ push(value) {
     if (this.Stack.length < this.capacity) {
       this.Stack.push(value);
     } else {
       console.log("stack overflow");
     }
   }
-
-  pop() {
+ pop() {
     if (this.Stack.length > 0) {
       this.Stack.pop();
     }
   }
-
-  display() {
+ display() {
     console.log(this.Stack);
   }
 }
-
 let stack = new Stack(5);
-
 stack.push(1);
 stack.push(2);
 stack.push(3);
 stack.push(4);
-stack.push(5);
-
 stack.display();
-
 stack.pop();
 stack.pop();
-stack.pop();
-stack.pop();
-
 stack.display();
 
 //// On this code we are tryed stack flow and unflow
