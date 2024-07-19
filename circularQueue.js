@@ -72,8 +72,8 @@ list.enqueue(60);
 
 list.print();
 
-list.dequeue();
-list.dequeue();
+// list.dequeue();
+// list.dequeue();
 // list.dequeue();
 
-list.print();
+
